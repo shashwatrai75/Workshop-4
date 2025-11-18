@@ -18,10 +18,14 @@ namespace Task6
                 return;
             }
 
-            // BREAKPOINT 1 — click here on the left margin
-            double percentage = marks / total * 100; // <-- wrong on purpose
+            // I put my FIRST BREAKPOINT on the next line
+            // When program stops here → I check marks and total values
+            // Example: I entered 45 and 50 → both values are correct
+            double percentage = marks / total * 100;   // ← BUG IS HERE
 
-            // BREAKPOINT 2 — click here on the left margin
+            // I put my SECOND BREAKPOINT on the next line
+            // After I press F10 → I see percentage became 0.0 (wrong!)
+            // I understood the problem: integer division (45/50 = 0)
             Console.WriteLine($"Percentage = {percentage}");
         }
     }
